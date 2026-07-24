@@ -989,6 +989,24 @@ section { padding: 110px 0; }
 }
 
 @media (max-width: 780px) {
+  .nav-inner {
+    padding: 0 16px;
+    gap: 12px;
+    min-width: 0;
+  }
+  .logo {
+    gap: 8px;
+    font-size: 1.05rem;
+    line-height: 1.1;
+    flex: 1;
+    min-width: 0;
+  }
+  .logo-image {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    transform: scale(1);
+  }
   .nav-links {
     position: fixed;
     top: 0;
@@ -1006,7 +1024,7 @@ section { padding: 110px 0; }
     transition: transform var(--transition);
   }
   .nav-links.open { transform: translateX(0); }
-  .hamburger { display: flex; }
+  .hamburger { display: flex; margin-left: auto; }
   .nav-cta { margin-top: 10px; }
 
   section { padding: 80px 0; }
@@ -1016,6 +1034,16 @@ section { padding: 110px 0; }
 }
 
 @media (max-width: 640px) {
+  .nav-inner { padding: 0 14px; }
+  .logo {
+    font-size: 0.98rem;
+    gap: 6px;
+  }
+  .logo-image {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
   .services-grid, .work-grid, .insights-grid, .testimonials-grid, .why-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 26px; }
   .hero-actions { justify-content: center; }

@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.getElementById('navbar');
   const backToTop = document.getElementById('back-to-top');
+  const loadingScreen = document.getElementById('loading-screen');
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('nav-links');
+
+  const hideLoadingScreen = () => {
+    if (loadingScreen) {
+      loadingScreen.classList.add('hidden');
+      loadingScreen.setAttribute('aria-hidden', 'true');
+    }
+  };
+
+  if (document.readyState === 'complete') {
+    hideLoadingScreen();
+  } else {
+    window.addEventListener('load', hideLoadingScreen, { once: true });
+    setTimeout(hideLoadingScreen, 1200);
+  }
 
   const toggleNavbarBg = () => {
     if (navbar) {
@@ -18,6 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  if (hamburger && navLinksEl) {
+    const closeMenu = () => {
+      hamburger.classList.remove('active');
+      navLinksEl.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    };
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinksEl.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+      link.addEventListener('click', closeMenu);
     });
   }
 
