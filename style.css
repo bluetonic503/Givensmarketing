@@ -989,6 +989,10 @@ section { padding: 110px 0; }
 }
 
 @media (max-width: 780px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+  }
   .nav-inner {
     padding: 0 16px;
     gap: 12px;
@@ -1002,9 +1006,9 @@ section { padding: 110px 0; }
     min-width: 0;
   }
   .logo-image {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
     transform: scale(1);
   }
   .nav-links {
@@ -1040,9 +1044,9 @@ section { padding: 110px 0; }
     gap: 6px;
   }
   .logo-image {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
   }
   .services-grid, .work-grid, .insights-grid, .testimonials-grid, .why-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 26px; }

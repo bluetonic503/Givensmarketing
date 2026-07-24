@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: #f7f7fb;
+  background: #f8fafc;
   color: #111827;
   line-height: 1.7;
 }
@@ -15,7 +15,7 @@ main {
 }
 
 .post-hero {
-  background: linear-gradient(135deg, #0f172a, #1d4ed8 60%, #22c55e);
+  background: linear-gradient(135deg, #0f172a 0%, #14532d 45%, #16a34a 100%);
   color: #fff;
   padding: 5rem 1.5rem 3rem;
 }
@@ -76,7 +76,7 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: #2563eb;
+  color: #16a34a;
 }
 
 .post-body {
@@ -91,8 +91,8 @@ main {
 .post-callout {
   margin: 2rem 0;
   padding: 1rem 1.25rem;
-  border-left: 4px solid #2563eb;
-  background: #eff6ff;
+  border-left: 4px solid #16a34a;
+  background: #f0fdf4;
   border-radius: 12px;
 }
 
@@ -148,9 +148,9 @@ main {
 
 .insight-image {
   padding: 1.25rem;
-  background: linear-gradient(135deg, #eff6ff, #dcfce7);
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
   font-size: 1.75rem;
-  color: #2563eb;
+  color: #16a34a;
 }
 
 .insight-body {
@@ -158,7 +158,7 @@ main {
 }
 
 .read-more {
-  color: #2563eb;
+  color: #16a34a;
   font-weight: 700;
 }
 
